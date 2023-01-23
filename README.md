@@ -19,5 +19,4 @@ REGION = "na"
 This is only for educational purposes, please do not use it online!
 
 ## How does it work?
-Whenever you attempt to lock an agent ingame, you are just sending a network request.
-All I am doing here is sending that same request before the game loads in.
+It sends a network request asking game "can i lock agent? :)", been using since Neon came out and no problems.
