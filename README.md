@@ -12,3 +12,5 @@ CONFIG = {
     'Fracture': "Harbor",
     'Lotus': "Breach",
 }`
+
+This is only for educational purposes, please do not use it online!
