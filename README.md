@@ -1,7 +1,7 @@
 # VALORANT-Instalocker
-VALORANT Instalocker made in like an hour
+Locks agents before the game even starts to load, made in less than an hour
 
-To use this, edit the CONFIG dictionary near the top of the code
+To use this with your own agents, edit the CONFIG and REGION near the top of the code
 ```py
 CONFIG = {
     'Ascent': "Jett",
@@ -12,6 +12,8 @@ CONFIG = {
     'Fracture': "Harbor",
     'Lotus': "Breach",
 }
+
+REGION = "na"
 ```
 
 This is only for educational purposes, please do not use it online!
