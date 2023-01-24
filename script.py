@@ -16,6 +16,7 @@ CONFIG = {
 }
 
 REGION = "na"
+SHARD = "na"
 
 # get account lockfile
 lockfile_path = os.path.join(os.getenv("LOCALAPPDATA"), R"Riot Games\Riot Client\Config\lockfile")
@@ -89,14 +90,14 @@ while True:
             
             try:
                 match_id = requests.get(
-                    f"https://glz-{REGION}-1.{REGION}.a.pvp.net/pregame/v1/players/{session['puuid']}",
+                    f"https://glz-{REGION}-1.{SHARD}.a.pvp.net/pregame/v1/players/{session['puuid']}",
                     headers=headers
                 ).json()["MatchID"]
             except: # this except is here because sometimes it will run after loading into the coregame, so it will throw an error
                 break
 
             match_data = requests.get(
-                f"https://glz-{REGION}-1.{REGION}.a.pvp.net/pregame/v1/matches/{match_id}",
+                f"https://glz-{REGION}-1.{SHARD}.a.pvp.net/pregame/v1/matches/{match_id}",
                 headers=headers
             ).json()
 
@@ -110,7 +111,7 @@ while True:
             agent_id = game_data["agents"][CONFIG[map_name]]
 
             response = requests.post(
-                f"https://glz-{REGION}-1.{REGION}.a.pvp.net/pregame/v1/matches/{match_id}/lock/{agent_id}",
+                f"https://glz-{REGION}-1.{SHARD}.a.pvp.net/pregame/v1/matches/{match_id}/lock/{agent_id}",
                 headers=headers
             ).json()
 
