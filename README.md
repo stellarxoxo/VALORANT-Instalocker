@@ -16,8 +16,6 @@ CONFIG = {
 REGION = "na"
 ```
 
-This is only for educational purposes, please do not use it online!
-
 ## Notes
 - If your region is LATAM or BR then set your shard to NA, otherwise have region and shard be the same
 - Regions: na, latam, eu, ap, br, kr
